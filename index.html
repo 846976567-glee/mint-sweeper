@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8f9f2"><meta name="description" content="和薄荷小兔一起玩扫雷。三种难度、安全首步、轻快音效，挖点小快乐。"><title>薄荷扫雷 · 挖点小快乐</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🍀%3C/text%3E%3C/svg%3E"><style>:root{font-family:'Noto Sans SC','Microsoft YaHei',sans-serif;color:#204c40;background:#f8f9f2;font-synthesis:none;--green:#79b38e;--pine:#204c40;--muted:#89978c;--line:#dce5d7;--surface:#fffffc;--ease:cubic-bezier(.22,1,.36,1)}
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="mint-version" content="noguess-20261019-v1"><meta name="theme-color" content="#f8f9f2"><meta name="description" content="和薄荷小兔一起玩扫雷。三种难度、安全首步、轻快音效，挖点小快乐。"><title>薄荷扫雷 · 挖点小快乐</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🍀%3C/text%3E%3C/svg%3E"><style>:root{font-family:'Noto Sans SC','Microsoft YaHei',sans-serif;color:#204c40;background:#f8f9f2;font-synthesis:none;--green:#79b38e;--pine:#204c40;--muted:#89978c;--line:#dce5d7;--surface:#fffffc;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box}body{margin:0;min-width:320px;background-image:linear-gradient(#b4c8a51a 1px,transparent 1px),linear-gradient(90deg,#b4c8a51a 1px,transparent 1px);background-size:26px 26px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #e7ab73;outline-offset:4px}button{transition:background .18s,transform .18s,box-shadow .18s}button:active{transform:translateY(2px)}svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}.site-header{max-width:1060px;margin:auto;height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 26px}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--pine);font-size:22px;font-weight:800;letter-spacing:2px}.brand small{display:block;font-size:9px;font-weight:600;letter-spacing:4px;margin-top:3px;color:#81a78a}.clover{font-size:57px;line-height:1;color:#83ba90;font-family:Georgia,serif}.header-actions{display:flex;gap:12px}.icon-button{width:43px;height:43px;display:grid;place-items:center;border:1px solid #d7e2d2;background:#fbfcf6;border-radius:50%;box-shadow:0 3px 6px #244c4006}.icon-button:hover{background:#eaf2e5;transform:translateY(-2px)}.icon-button svg{width:20px;height:20px}.help-button{font-size:25px;font-family:Georgia,serif;font-weight:bold}main{max-width:950px;margin:auto;padding:0 25px}.intro{position:relative;display:flex;align-items:center;justify-content:space-between;height:142px}.intro-copy{z-index:1;padding-bottom:5px}.intro h1{font-size:clamp(27px,3.6vw,44px);font-weight:900;letter-spacing:1px;margin:0 0 12px;line-height:1.5}.intro h1 span{color:var(--pine)}.intro p{color:#829087;font-size:17px;letter-spacing:1px;margin:0}.bunny{position:absolute;right:-8px;bottom:-1px;width:300px;height:220px;object-fit:contain;pointer-events:none;animation:bunny-in .9s var(--ease) both}.game-options{display:flex;align-items:center;justify-content:space-between;margin:14px 0 18px;gap:16px;position:relative}.segmented{display:flex;border:1.5px solid var(--line);border-radius:26px;padding:3px;background:#fbfcf6;box-shadow:0 2px 4px #1b493d04}.segmented button{border:0;background:transparent;border-radius:22px;height:34px;min-width:104px;font-size:14px;font-weight:600;color:#6b877a}.segmented button:hover{background:#e7efdf}.segmented button.active{background:var(--green);color:#fff;box-shadow:inset 0 1px 1px #ffffff33,0 2px 5px #518a6420}.best{display:flex;gap:9px;align-items:center;padding:10px 18px;border:1.5px solid #e0e5d8;border-radius:24px;background:#fafbf4;color:#a1a292;font-size:13px;white-space:nowrap}.best svg{color:#e4b55d;width:19px;height:19px}.best strong{font-weight:500;font-variant-numeric:tabular-nums;margin-left:8px}.game-panel{border:1.5px solid #b9d6bd;border-radius:19px;background:#fffffcf2;box-shadow:0 8px 24px #375a3c06;padding:0 26px;position:relative}.game-hud{height:72px;border-bottom:1px solid #e3e9dd;display:grid;grid-template-columns:1fr 64px 1fr;align-items:center}.mine-counter,.timer{display:flex;align-items:center;gap:12px}.mine-counter>svg{color:#7eaf86;width:29px;height:29px;fill:#8ab793;stroke:#719a77}.mine-counter strong,.timer strong{font-size:27px;font-weight:700;letter-spacing:.5px;font-variant-numeric:tabular-nums}.mine-counter span{font-size:13px;color:#789182;margin-left:-3px}.timer{justify-content:flex-end;gap:10px}.timer svg{color:#789f81;width:27px;height:27px}.restart{position:relative;background:#f0f8e9;border:1.5px solid #a7c8a7;box-shadow:0 3px 9px #5c8e5420,inset 0 0 0 4px #fbfff8;border-radius:50%;width:57px;height:57px;justify-self:center;display:grid;place-items:center}.restart:hover{transform:rotate(-8deg);background:#e5f2df}.bunny-face{position:relative;display:block;width:30px;height:25px;margin-top:13px;background:#fffdf2;border:1.5px solid #c3b9a4;border-radius:50% 50% 44% 44%}.bunny-face:before,.bunny-face:after{content:'';position:absolute;width:9px;height:24px;border:1.5px solid #c3b9a4;background:linear-gradient(90deg,#fffdf2 25%,#f7d2c0 25%,#f7d2c0 65%,#fffdf2 65%);border-radius:70% 70% 30% 30%;top:-20px;z-index:0;transform:rotate(-12deg)}.bunny-face:before{left:3px}.bunny-face:after{right:1px;transform:rotate(16deg)}.bunny-face b{position:absolute;inset:0;display:grid;place-items:center;font-size:18px;line-height:1;color:#856653;letter-spacing:0;z-index:1;font-family:sans-serif;background:#fffdf2;border-radius:50%}.bunny-face b:after{content:'';position:absolute;width:5px;height:3px;border-radius:50%;background:#f2b9a9;bottom:7px;left:3px;box-shadow:17px 0 #f2b9a9}.board-wrap{position:relative;width:max-content;max-width:100%;margin:17px auto 0}.board{--cols:9;--tile:40px;display:grid;grid-template-columns:repeat(var(--cols),var(--tile));gap:4px;padding:3px;border:1px solid #d2e1cc;border-radius:8px;background:#f0f5e8;touch-action:manipulation;user-select:none;-webkit-user-select:none}.cell{width:var(--tile);height:var(--tile);border:1px solid #9ec7a4;border-radius:6px;background:linear-gradient(145deg,#bcdcc1,#afd3b7);box-shadow:inset 1px 1px 0 #e3f1de,inset 0 -3px 0 #91bc9d,0 1px 1px #476a4a14;display:grid;place-items:center;font-family:'Trebuchet MS',sans-serif;font-weight:700;font-size:25px;line-height:1;padding:0;position:relative}.cell:hover:not(.open){background:linear-gradient(145deg,#cfe8cb,#c2dfbc);transform:translateY(-2px);box-shadow:inset 1px 1px 0 #eef9e9,inset 0 -3px 0 #a5c9a4,0 4px 8px #476a4a12}.cell:active:not(.open){transform:translateY(1px);box-shadow:inset 1px 1px 3px #5c8e5440}.cell.open{border-color:#e7ecdd;background:#f6f7ed;box-shadow:inset 0 1px 3px #33563104;cursor:default}.cell.pop{animation:reveal .38s var(--ease) both}.cell[data-number="1"]{color:#62a6d8}.cell[data-number="2"]{color:#54af97}.cell[data-number="3"]{color:#e5a071}.cell[data-number="4"]{color:#9c91c2}.cell[data-number="5"]{color:#ca8195}.cell[data-number="6"]{color:#609ba1}.cell[data-number="7"],.cell[data-number="8"]{color:#796b8d}.cell svg{width:23px;height:23px}.cell.flagged svg{fill:#ea9e83;stroke:#ca8d78;stroke-width:1.5;animation:flag-in .25s var(--ease)}.cell.mine{background:#fae0d1;border-color:#e5c6b2}.cell.mine svg{fill:#c48f79;stroke:#ad7d68}.cell.exploded{background:#edb59d}.cell.wrong:after{content:'×';position:absolute;color:#9f4c49;font-size:30px}.game-status{font-size:13px;color:#90a091;text-align:center;margin:14px 0 17px;min-height:20px;line-height:1.5}.tools{display:flex;align-items:center;flex-direction:column;margin:16px 0 0;gap:9px}.mode button{min-width:106px;display:flex;align-items:center;justify-content:center;gap:9px;height:32px}.mode svg{width:17px;height:17px}.mode button.active svg{fill:currentColor;stroke-width:1.5}.mode button:not(.active) svg{fill:#e4d9bd;stroke:#9d9f88}.input-hint{color:#a1a594;font-size:11px;margin:0;letter-spacing:.3px}.input-hint span{padding:0 5px;color:#c2c8b7}.how-to{display:grid;grid-template-columns:1fr 1.06fr 1.08fr;gap:26px;margin:34px -25px 22px}.how-to>div{display:flex;gap:14px;align-items:flex-start;padding-left:20px}.how-to>div+div{border-left:1px solid #dce4d4;padding-left:28px}.step{color:#7bb58b;font-family:'Trebuchet MS',sans-serif;font-size:24px;font-style:italic;font-weight:700;line-height:1.25}.how-to h3{font-size:15px;margin:0 0 6px;font-weight:700}.how-to p{margin:0;color:#90998c;font-size:11px;line-height:1.8;white-space:nowrap}footer{display:flex;align-items:center;justify-content:center;gap:18px;color:#9ca492;font-size:11px;letter-spacing:2px;padding:0 15px 25px}footer svg{width:17px;height:17px;color:#89b78d;fill:#a6c9a2;stroke-width:1.2}.result[hidden]{display:none}.result{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:#fffff0eb;backdrop-filter:blur(5px);border-radius:8px;animation:result-in .45s var(--ease);padding:18px}.result-symbol{font-size:54px;color:#82b48b;line-height:1.2}.result h2{font-size:25px;margin:13px 0 4px}.result p{font-size:14px;color:#83937f;line-height:1.8;white-space:pre-line}.primary-button{background:#79ad85;color:white;border:0;border-radius:24px;padding:12px 25px;font-weight:600;font-size:14px;box-shadow:0 3px 0 #61946e}.primary-button:hover{background:#699f77;transform:translateY(-2px)}.primary-button span{margin-left:20px}.result.inspect{pointer-events:none;opacity:0}.confetti{position:fixed;top:-20px;z-index:10;pointer-events:none;width:9px;height:14px;border-radius:3px;animation:confetti-fall 2.9s ease-in forwards}dialog{width:min(480px,calc(100% - 32px));border:1px solid #c0d6b9;border-radius:24px;padding:34px;background:#fffef6;color:var(--pine);box-shadow:0 20px 100px #254c4025}dialog::backdrop{background:#284b3f45;backdrop-filter:blur(4px)}dialog h2{font-size:21px;margin:10px 0}dialog>p{font-size:13px;line-height:1.8;color:#87937f}.dialog-flower{font-size:36px;color:#80b58e}.dialog-close{position:absolute;right:16px;top:16px;font-size:25px;width:32px;height:32px}dialog ol{padding-left:20px;font-size:13px;line-height:1.9;color:#89917f}dialog li{margin-bottom:13px}dialog b{color:#42634d}dialog .dialog-note{font-size:11px;border-top:1px solid #e1e8d9;padding-top:13px}dialog .primary-button{display:block;width:100%;margin-top:20px}@keyframes reveal{from{transform:scale(.83);opacity:.3}to{transform:scale(1);opacity:1}}@keyframes flag-in{from{transform:translateY(-7px) rotate(-12deg);opacity:0}to{transform:none;opacity:1}}@keyframes bunny-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}@keyframes result-in{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}@keyframes confetti-fall{to{transform:translate3d(var(--drift),105vh,0) rotate(680deg);opacity:0}}
 @media(min-width:1200px) and (min-height:950px){.site-header{height:84px}.intro{height:148px}.game-options{margin-top:16px}.game-panel{padding:0 30px}.board{--tile:42px}.game-hud{height:74px}.how-to{margin-top:36px}}
 @media(max-width:760px){.site-header{height:72px;padding:0 22px}.brand{font-size:18px;gap:9px}.brand small{font-size:7px;letter-spacing:3px}.clover{font-size:47px}main{padding:0 20px;max-width:620px}.intro{height:150px}.intro h1{font-size:30px;letter-spacing:0}.intro p{font-size:13px;letter-spacing:0}.intro-copy{padding-bottom:20px}.bunny{width:200px;height:156px;right:-8px;bottom:-6px;opacity:.95}.intro-copy{max-width:66%}.game-options{margin-top:6px}.segmented button{min-width:76px;font-size:12px;height:32px}.best{font-size:11px;padding:10px;gap:5px}.best strong{margin-left:2px}.game-panel{padding:0 16px}.game-hud{height:72px}.board{--tile:min(43px,calc((100vw - 114px)/9))}.mine-counter{gap:8px}.mine-counter span{font-size:11px}.mine-counter strong,.timer strong{font-size:23px}.mine-counter>svg{width:23px}.timer svg{width:23px}.restart{width:50px;height:50px}.how-to{gap:16px;margin:28px 0 24px;grid-template-columns:1fr}.how-to>div{padding-left:4px;gap:13px}.how-to>div+div{border:0;padding-left:4px}.how-to h3{font-size:13px;margin-bottom:3px}.how-to p{font-size:11px}.step{font-size:22px}.input-hint{font-size:10px}.input-hint span{padding:0 1px}footer{font-size:10px;letter-spacing:1px}.cell{font-size:22px}.game-status{font-size:11px}.result h2{font-size:21px}.result p{font-size:12px}.mode button{min-width:105px}.game-panel.dense{padding:0 10px}.dense .game-hud{margin:0 6px}.dense .board{gap:3px}.dense .cell{border-radius:4px;font-size:19px}.dense .cell svg{width:17px;height:17px}}
 @media(max-width:430px){.intro{height:134px}.intro h1{font-size:27px;max-width:250px;line-height:1.6}.intro-copy{max-width:80%;padding-bottom:23px}.intro p{font-size:11px}.bunny{width:150px;height:125px;right:-10px;bottom:-3px;z-index:0}.game-options{gap:8px}.segmented button{min-width:65px}.best{padding:9px 10px;font-size:10px;gap:5px}.best svg{width:15px}.best span{display:none}.best strong{font-size:12px}.header-actions{gap:9px}.icon-button{width:36px;height:36px}.game-panel{border-radius:15px;padding:0 10px}.mine-counter span{font-size:10px}.mine-counter{gap:6px}.game-hud{height:69px;grid-template-columns:1fr 50px 1fr}.timer{gap:6px}.timer svg{width:22px}.mine-counter strong,.timer strong{font-size:22px}.board{--tile:calc((100vw - 99px)/9);gap:4px}.board-wrap{margin-top:14px}.cell{font-size:21px}.game-status{font-size:10px;margin:13px 0}.input-hint{font-size:9px;letter-spacing:0}.how-to{margin-top:25px}.result h2{font-size:20px}.result-symbol{font-size:40px}.result p{margin:7px 0 18px}.dense .result h2{font-size:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.board[aria-busy="true"]{opacity:.55;pointer-events:none}
 </style></head>
 <body>
 <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -25,14 +26,108 @@
 <section class="game-panel" aria-label="扫雷游戏">
 <div class="game-hud"><div class="mine-counter"><svg><use href="#i-flag"/></svg><strong id="remaining">10</strong><span>剩余地雷</span></div><button class="restart" id="restart" aria-label="重新开始" title="重新开始"><span class="bunny-face" aria-hidden="true"><i></i><b>·ᴗ·</b></span></button><div class="timer"><svg><use href="#i-clock"/></svg><strong id="timer">00:00</strong></div></div>
 <div class="board-wrap"><div class="board" id="board" role="group" aria-label="初级棋盘，9 行 9 列"></div><div class="result" id="result" hidden><span class="result-symbol" id="result-symbol">✿</span><h2 id="result-title"></h2><p id="result-copy"></p><button class="primary-button" id="play-again">再玩一局 <span>↗</span></button></div></div>
-<p class="game-status" id="status" aria-live="polite">第一步，放心点。小兔帮你守护安全！</p>
+<p class="game-status" id="status" aria-live="polite">无猜模式 · 每局都经过逻辑验证，放心探索！</p>
 </section>
 <div class="tools"><div class="segmented mode" role="group" aria-label="操作模式"><button class="active" data-mode="dig" aria-pressed="true"><svg><use href="#i-cursor"/></svg>挖开</button><button data-mode="flag" aria-pressed="false"><svg><use href="#i-flag"/></svg>插旗</button></div><p class="input-hint">鼠标：左键挖开 · 右键插旗 <span>｜</span> 键盘：方向键移动 · F 插旗</p></div>
 <section class="how-to" aria-label="游戏小提示"><div><span class="step">01</span><div><h3>点击探索</h3><p>点开一个方块，探索周围的格子。</p></div></div><div><span class="step">02</span><div><h3>数字是线索</h3><p>数字代表周围 8 格中有多少地雷。</p></div></div><div><span class="step">03</span><div><h3>标记小地雷</h3><p>插上小旗，记住你觉得有雷的格子。</p></div></div></section>
 </main>
 <footer><svg><use href="#i-sprout"/></svg>慢慢来，每一步都算数。<svg><use href="#i-sprout"/></svg></footer>
-<dialog id="help-dialog"><button class="dialog-close icon-button" aria-label="关闭玩法">×</button><span class="dialog-flower">✿</span><h2>和小兔一起，轻松扫雷</h2><p>找出所有没有地雷的格子，就赢啦！</p><ol><li><b>点一点，探索格子</b><br>第一步及周围的格子一定安全。空白区域会自动展开。</li><li><b>看数字，推理地雷</b><br>数字表示周围 8 个格子里的地雷数量。</li><li><b>插小旗，标记危险</b><br>鼠标右键、手机长按，或切换「插旗」模式。再次操作可以取消。</li><li><b>小技巧：快速展开</b><br>数字周围插够对应数量的旗，再点数字就能展开其余格子。记得先确认旗子的位置哦。</li></ol><p class="dialog-note">键盘也能玩：方向键移动，空格 / 回车操作，F 插旗。<br>成绩保存在当前浏览器，三种难度分别记录。</p><button class="primary-button" id="got-it">知道啦，开始探索</button></dialog>
+<dialog id="help-dialog"><button class="dialog-close icon-button" aria-label="关闭玩法">×</button><span class="dialog-flower">✿</span><h2>和小兔一起，轻松扫雷</h2><p>找出所有没有地雷的格子，就赢啦！每局均经过验证，结合数字与剩余地雷总数，可以逐步推理通关。</p><ol><li><b>点一点，探索格子</b><br>第一步及周围的格子一定安全。空白区域会自动展开。</li><li><b>看数字，推理地雷</b><br>数字表示周围 8 个格子里的地雷数量。</li><li><b>插小旗，标记危险</b><br>鼠标右键、手机长按，或切换「插旗」模式。再次操作可以取消。</li><li><b>小技巧：快速展开</b><br>数字周围插够对应数量的旗，再点数字就能展开其余格子。记得先确认旗子的位置哦。</li></ol><p class="dialog-note">键盘也能玩：方向键移动，空格 / 回车操作，F 插旗。<br>成绩保存在当前浏览器，三种难度分别记录。</p><button class="primary-button" id="got-it">知道啦，开始探索</button></dialog>
 <script>(()=>{
+// Proofs use only revealed clues, proven mines, and the total mine count.
+function adjacentCells(cols, rows) {
+  return Array.from({length:cols*rows},(_,i)=>{
+    const result=[],x=i%cols,y=Math.floor(i/cols);
+    for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++)if((dx||dy)&&x+dx>=0&&x+dx<cols&&y+dy>=0&&y+dy<rows)result.push((y+dy)*cols+x+dx);
+    return result;
+  });
+}
+function seededRandom(seed) {
+  return ()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
+}
+function candidateBoard(config, first, random, adjacent) {
+  const safe=new Set([first,...adjacent[first]]);
+  const candidates=Array.from({length:config.cols*config.rows},(_,i)=>i).filter(i=>!safe.has(i));
+  for(let i=candidates.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[candidates[i],candidates[j]]=[candidates[j],candidates[i]];}
+  const mines=new Set(candidates.slice(0,config.mines));
+  return candidates.length<config.mines?null:Array.from({length:config.cols*config.rows},(_,i)=>({mine:mines.has(i),count:adjacent[i].filter(n=>mines.has(n)).length}));
+}
+function visibleDeductions(clues, knownMines, adjacent, totalMines) {
+  const unknown=[];
+  for(let i=0;i<clues.length;i++)if(clues[i]<0&&!knownMines.has(i))unknown.push(i);
+  const safe=new Set(),mines=new Set(),constraints=[],keys=new Map();let valid=true;
+  const add=(cells,count)=>{
+    if(count<0||count>cells.length){valid=false;return;}
+    if(!cells.length)return;
+    if(count===0){cells.forEach(i=>safe.add(i));return;}
+    if(count===cells.length){cells.forEach(i=>mines.add(i));return;}
+    cells.sort((a,b)=>a-b);
+    const key=cells.join(',');
+    if(keys.has(key)){if(keys.get(key)!==count)valid=false;return;}
+    keys.set(key,count);constraints.push({cells,count,set:new Set(cells)});
+  };
+  for(let i=0;i<clues.length;i++)if(clues[i]>=0){
+    const hidden=adjacent[i].filter(n=>clues[n]<0&&!knownMines.has(n));
+    add(hidden,clues[i]-adjacent[i].filter(n=>knownMines.has(n)).length);
+  }
+  add(unknown,totalMines-knownMines.size);
+  if(valid&&!safe.size&&!mines.size){
+    // If A is a subset of B, B minus A has count(B)-count(A) mines.
+    constraints.sort((a,b)=>a.cells.length-b.cells.length);
+    for(let a=0;a<constraints.length;a++)for(let b=a+1;b<constraints.length;b++){
+      const small=constraints[a],large=constraints[b];
+      if(small.cells.length===large.cells.length||!small.cells.every(i=>large.set.has(i)))continue;
+      const difference=large.cells.filter(i=>!small.set.has(i)),count=large.count-small.count;
+      if(count<0||count>difference.length){valid=false;continue;}
+      if(count===0)difference.forEach(i=>safe.add(i));
+      else if(count===difference.length)difference.forEach(i=>mines.add(i));
+    }
+  }
+  if([...safe].some(i=>mines.has(i)))valid=false;
+  return {safe:[...safe],mines:[...mines],valid};
+}
+function solveWithoutGuessing(cells, first, adjacent, totalMines) {
+  const clues=new Int8Array(cells.length).fill(-1),knownMines=new Set();let opened=0,steps=0;
+  const expand=indices=>{
+    const queue=[...indices];
+    while(queue.length){
+      const i=queue.pop();if(clues[i]>=0||knownMines.has(i))continue;
+      if(cells[i].mine)return false;
+      clues[i]=cells[i].count;opened++;
+      if(!clues[i])for(const n of adjacent[i])if(clues[n]<0&&!knownMines.has(n))queue.push(n);
+    }
+    return true;
+  };
+  if(!expand([first]))return {solved:false,opened,steps};
+  while(opened<cells.length-totalMines){
+    const next=visibleDeductions(clues,knownMines,adjacent,totalMines);
+    if(!next.valid||(!next.safe.length&&!next.mines.length))return {solved:false,opened,steps};
+    for(const i of next.mines){if(!cells[i].mine)return {solved:false,opened,steps};knownMines.add(i);}
+    if(!expand(next.safe))return {solved:false,opened,steps};
+    if(++steps>cells.length)return {solved:false,opened,steps};
+  }
+  return {solved:true,opened,steps};
+}
+// Certified fallback seeds, one for every first-click position in each difficulty.
+const CERTIFIED_SEEDS = {"9x9:10":[1,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"12x12:25":[1,3,3,3,3,3,3,3,2,2,2,2,3,1,1,1,1,1,2,1,1,1,1,2,3,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,3,3,4,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,2,2,2,2,8,6,2,2,2,2,10,4,4,2,1,1,4,4,4,2,2,2,4,4,4,4,1,1,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,2,2,2,2,2,2,2,1],"16x16:50":[2,4,4,4,4,8,8,8,8,8,11,11,11,11,4,26,4,4,4,4,4,4,4,4,4,4,4,4,10,4,20,11,4,3,3,3,3,3,3,14,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,9,10,10,10,10,10,4,4,11,4,4,4,4,4,4,4,4,4,4,10,10,10,10,4,4,4,4,9,9,4,4,4,4,4,9,9,9,9,1,1,3,4,1,1,1,1,3,1,1,1,3,3,3,3,6,1,3,8,1,1,3,3,10,10,3,10,3,3,21,6,6,6,21,8,8,8,10,26,26,21,3,3,3,3,3,3,3,10,9,4,8,5,5,8,10,10,10,10,10,10,10,10,10,10,3,9,10,10,10,10,10,10,10,10,10,10,10,2,2,2,1,42,10,10,10,10,10,10,10,10,10,22,22,10,10,10,1,8,10,10,10,10,10,17,17,21,2,2,2,17,17,24,1,2,10,10,10,10,12,17,17,17,17,2,2,2,2,2,9,2,2,2,2,17,11,2,2,2,2,2,2,2,2,2,21,6,2,2,2,2,2,2,2,2,2,2,2,25,21,21,3]};
+function generateNoGuess(config, first, random=Math.random) {
+  const adjacent=adjacentCells(config.cols,config.rows);
+  if(!Number.isInteger(first)||first<0||first>=adjacent.length)throw new Error('Invalid first click');
+  for(let attempt=1;attempt<=48;attempt++){
+    const cells=candidateBoard(config,first,random,adjacent);
+    if(cells&&solveWithoutGuessing(cells,first,adjacent,config.mines).solved)return {cells,attempts:attempt};
+  }
+  const key=`${config.cols}x${config.rows}:${config.mines}`,seed=CERTIFIED_SEEDS[key]?.[first];
+  if(seed!==undefined){
+    const cells=candidateBoard(config,first,seededRandom(seed),adjacent);
+    if(cells&&solveWithoutGuessing(cells,first,adjacent,config.mines).solved)return {cells,attempts:49};
+  }
+  throw new Error('No verified board is available');
+}
+function generationWorkerSource() {
+  return `'use strict';\nconst CERTIFIED_SEEDS=${JSON.stringify(CERTIFIED_SEEDS)};\n${[adjacentCells,seededRandom,candidateBoard,visibleDeductions,solveWithoutGuessing,generateNoGuess].map(f=>f.toString()).join('\n')}\nself.onmessage=({data})=>{try{self.postMessage({result:generateNoGuess(data.config,data.first)})}catch(error){self.postMessage({error:error.message})}};`;
+}
+
 const LEVELS = { easy: {name:'初级',cols:9,rows:9,mines:10}, medium:{name:'中级',cols:12,rows:12,mines:25}, hard:{name:'高级',cols:16,rows:16,mines:50} };
 class Minesweeper {
   constructor(level='easy', random=Math.random) {
@@ -45,21 +140,20 @@ class Minesweeper {
     return result;
   }
   plant(first) {
-    const safe=new Set([first,...this.neighbors(first)]);
-    const choices=this.cells.map((_,i)=>i).filter(i=>!safe.has(i));
-    for(let n=choices.length-1;n>0;n--) { const k=Math.floor(this.random()*(n+1)); [choices[k],choices[n]]=[choices[n],choices[k]]; }
-    choices.slice(0,this.config.mines).forEach(i=>{this.cells[i].mine=true;});
-    this.cells.forEach((c,i)=>{c.count=this.neighbors(i).filter(n=>this.cells[n].mine).length;});
+    this.installBoard(generateNoGuess(this.config,first,this.random).cells);
+  }
+  installBoard(board) {
+    board.forEach((c,i)=>{this.cells[i].mine=c.mine;this.cells[i].count=c.count;});
     this.status='playing';
   }
   flag(index) {
     const c=this.cells[index];
-    if(!c||c.open||['won','lost'].includes(this.status)||(!c.flag&&this.flags>=this.config.mines)) return false;
+    if(!c||c.open||['won','lost','generating'].includes(this.status)||(!c.flag&&this.flags>=this.config.mines)) return false;
     c.flag=!c.flag; this.flags+=c.flag?1:-1; return true;
   }
   reveal(index) {
     const cell=this.cells[index];
-    if(!cell||cell.flag||['won','lost'].includes(this.status)) return [];
+    if(!cell||cell.flag||['won','lost','generating'].includes(this.status)) return [];
     if(this.status==='ready') this.plant(index);
     if(cell.open) {
       if(!cell.count) return [];
@@ -89,6 +183,30 @@ const read=(key,fallback=null)=>{try{return localStorage.getItem(key)??fallback;
 const save=(key,value)=>{try{localStorage.setItem(key,String(value));}catch{/* Private browsing can disable storage. */}};
 let level='easy',game,mode='dig',started=0,elapsed=0,clock=null,buttons=[],focusIndex=0;
 let audioEnabled=read('mint-sound','off')==='on',audio=null,longPress=null,longPressed=false,resultDelay=null;
+let generation=null;
+function prepareBoard(config,first){
+  return new Promise((resolve,reject)=>{
+    let worker,url,settled=false;
+    const finish=(error,result)=>{
+      if(settled)return;settled=true;
+      worker?.terminate();if(url)URL.revokeObjectURL(url);generation=null;
+      error?reject(error):resolve(result);
+    };
+    const fallback=()=>setTimeout(()=>{
+      if(settled)return;
+      try{finish(null,generateNoGuess(config,first));}catch(error){finish(error);}
+    },0);
+    generation={cancel:()=>finish(new Error('Generation cancelled'))};
+    try{
+      if(typeof Worker==='undefined')return fallback();
+      url=URL.createObjectURL(new Blob([generationWorkerSource()],{type:'text/javascript'}));
+      worker=new Worker(url);
+      worker.onmessage=({data})=>data.error?finish(new Error(data.error)):finish(null,data.result);
+      worker.onerror=e=>{e.preventDefault();worker.terminate();fallback();};
+      worker.postMessage({config,first});
+    }catch{fallback();}
+  });
+}
 const icon=name=>`<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const format=seconds=>`${String(Math.floor(seconds/60)).padStart(2,'0')}:${String(seconds%60).padStart(2,'0')}`;
 function sound(kind='open') {
@@ -113,6 +231,7 @@ function sizeBoard(){
   else {const available=Math.min(566,window.innerWidth-78);const tile=Math.min(cols===12?35:30,Math.floor((available-(cols-1)*3-8)/cols));board.style.setProperty('--tile',`${tile}px`);}
 }
 function reset(){
+  generation?.cancel();board.setAttribute('aria-busy','false');
   clearTimeout(resultDelay);clearTimeout(longPress);longPressed=false;
   clearInterval(clock);clock=null;started=0;elapsed=0;focusIndex=0;
   game=new Minesweeper(level);$('#timer').textContent='00:00';$('#result').hidden=true;$('#result').classList.remove('inspect');
@@ -127,7 +246,7 @@ function reset(){
     b.addEventListener('focus',()=>{buttons[focusIndex].tabIndex=-1;focusIndex=index;b.tabIndex=0;});
     b.addEventListener('keydown',e=>handleKey(e,index));board.append(b);return b;
   });
-  sizeBoard();updateBest();render();$('#status').textContent='第一步，放心点。小兔帮你守护安全！';
+  sizeBoard();updateBest();render();$('#status').textContent='无猜模式 · 每局都经过逻辑验证，放心探索！';
 }
 function render(changed=[]){
   const changes=new Set(changed);
@@ -142,15 +261,30 @@ function render(changed=[]){
   });
   $('#remaining').textContent=game.config.mines-game.flags;
 }
-function act(index,flag=false){
-  if(['won','lost'].includes(game.status))return;
+async function act(index,flag=false){
+  if(['won','lost','generating'].includes(game.status))return;
   if(flag){if(game.flag(index)){sound('flag');render();}return;}
-  const before=game.status,changed=game.reveal(index);
-  if(before==='ready'&&game.status!=='ready'){
+  if(game.cells[index].flag)return;
+  if(game.status==='ready'){
+    const activeGame=game;activeGame.status='generating';board.setAttribute('aria-busy','true');
+    $('#status').textContent='小兔正在挑选无需猜测的棋盘…';
+    try{
+      const result=await prepareBoard(activeGame.config,index);
+      if(game!==activeGame)return;
+      activeGame.installBoard(result.cells);
+    }catch{
+      if(game!==activeGame)return;
+      activeGame.status='ready';board.setAttribute('aria-busy','false');
+      $('#status').textContent='棋盘准备未完成，请再点一次。';return;
+    }
+    board.setAttribute('aria-busy','false');
+  }
+  const changed=game.reveal(index);
+  if(!started&&changed.length){
     started=Date.now();clock=setInterval(()=>{elapsed=Math.floor((Date.now()-started)/1000);$('#timer').textContent=format(elapsed);},250);
   }
   if(changed.length)sound();render(changed);
-  if(game.status==='playing')$('#status').textContent=`已探索 ${game.opened} / ${game.cells.length-game.config.mines} 格 · 点击数字可快速展开周围格子`;
+  if(game.status==='playing')$('#status').textContent=`无猜 · 已探索 ${game.opened} / ${game.cells.length-game.config.mines} 格 · 点击数字快速展开`;
   if(['won','lost'].includes(game.status))finish();
 }
 function finish(){
@@ -191,3 +325,4 @@ window.addEventListener('resize',sizeBoard);updateSound();reset();
 
 })();</script>
 </body></html>
+
